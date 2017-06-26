@@ -1,0 +1,30 @@
+{
+	"ru": {
+		"title": "Привет мир!",
+		"text": "Сейчас читаешь этот текст на Русском языке!<br />Теперь, попробуй выбери другой язык"
+	},
+	"be": {
+		"title": "Прывітанне свет!",
+		"text": "Зараз чытаеш гэты тэкст на Беларускім мове! <br /> Зараз, паспрабуй выберы іншую мову"
+	},
+	"uk": {
+		"title": "Привіт світ!",
+		"text": "Зараз читаєш цей текст на українській мові! <br /> Тепер, спробуй вибери іншу мову"
+	},
+	"en": {
+		"title": "Hello World!",
+		"text": "Now you read this text in English!<br />Now, try to choose another language"
+	},
+	"de": {
+		"title": "Hallo Welt!",
+		"text": "Lesen Sie nun diesen Text in Deutscher Sprache!<br />Nun, versuchen Sie die gewünschte Sprache wählen Sie"
+	},
+	"fr": {
+		"title": "Bonjour tout le monde!",
+		"text": "Maintenant, lisez ce texte en français! <br /> Maintenant, essayez de sélectionner une autre langue"
+	},
+	"es": {
+		"title": "¡Hola mundo!",
+		"text": "Ahora lea este texto en español!<br />Ahora, trate de seleccionar el idioma deseado se"
+	}
+}
