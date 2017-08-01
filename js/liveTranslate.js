@@ -1,8 +1,8 @@
 /*
 * Just Live Translate
 * Author: Иван "ImFuryPro" Сапоненко
-* Version: 1.1
-* Description: Реализует живой перевод сайта по словарю
+* Version: 1.2
+* Description: Реализует живой перевод сайта по созданному словарю
 */
 
 $(function() {
@@ -14,14 +14,14 @@ $(function() {
     * source - путь до словаря
     * lang - язык словаря
     */
-    var setGetDictionary = function(source, lang) {
-        var dict = [];
-
+    setGetDictionary = function(source, lang) {
         $.getJSON(source, function(data) {
-            dict.push(data[lang]);
+            for (var word in data[lang]) {
+                var translateBlock = $('[word="'+ word +'"]');
+                var dictWord = data[lang][word];
 
-            for (var word in dict[0]) {
-                $('[word="'+ word +'"]').html(dict[0][word]);
+                if (translateBlock.prop('placeholder') != undefined) { translateBlock.prop('placeholder', dictWord); }
+                else { translateBlock.html(dictWord); }
             }
         });
     };
@@ -31,7 +31,7 @@ $(function() {
     * Переключение языка на лету
     * idButton - id ссылки или кнопки
     */
-    var changeLanguage = function(idButton) {
+    changeLanguage = function(idButton) {
         $("#" + idButton).click(function () {
             $.cookie('lang', idButton);
             setGetDictionary(source, idButton);
